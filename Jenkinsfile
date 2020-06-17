@@ -358,7 +358,7 @@ spec:
                         URL="http://${INGRESS_HOST}"
                     fi
 
-                    sleep_countdown=15
+                    sleep_countdown=5
 
                     # sleep for 10 seconds to allow enough time for the server to start
                     sleep 15
