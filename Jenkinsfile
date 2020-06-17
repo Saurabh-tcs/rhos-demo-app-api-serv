@@ -358,10 +358,10 @@ spec:
                         URL="http://${INGRESS_HOST}"
                     fi
 
-                    sleep_countdown=5
+                    sleep_countdown=15
 
                     # sleep for 10 seconds to allow enough time for the server to start
-                    sleep 10
+                    sleep 15
                     echo "Health check start"
                     while [[ $(curl -sL -w "%{http_code}\\n" "${URL}/health" -o /dev/null --connect-timeout 3 --max-time 5 --retry 3 --retry-max-time 30) != "200" ]]; do
                         sleep 30
